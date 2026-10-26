@@ -55,8 +55,11 @@ mysql> create view student_course_view AS
     -> FROM Student s
     -> JOIN Enrollments e
     -> ON s.student_id = e.student_id;
-
-10. Create an index on the name column of the Students table and a unique index on the enroll_id column of the Enrollments table 
 mysql> UPDATE student_course_view
     -> SET marks = 90
     -> WHERE student_id = 1 AND course = 'DBMS';
+
+10. Create an index on the name column of the Students table and a unique index on the enroll_id column of the Enrollments table 
+mysql> create index idx_student_name ON Student(name);
+mysql> create index idx_enroll_id ON Enrollments(enroll_id);
+mysql> show index from Student;
