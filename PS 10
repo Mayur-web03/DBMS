@@ -90,12 +90,11 @@ JOIN Loan L
     ON B.loan_no = L.loan_no;
 
 6. List all customers in alphabetical order who have a loan from Akurdi branch
-SELECT DISTINCT B.cust_name
-FROM Borrower B
-JOIN Loan L
-    ON B.loan_no = L.loan_no
-WHERE L.branch_name = 'Akurdi'
-ORDER BY B.cust_name ASC;
+SELECT b.cust_name
+FROM Borrower b
+JOIN Loan l ON b.loan_no = l.loan_no
+WHERE l.branch_name = 'Akurdi'
+ORDER BY b.cust_name ASC;
 
 7. Find the average account balance at Chinchwad branch
 SELECT AVG(balance) AS average_balance
