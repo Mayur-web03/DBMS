@@ -61,4 +61,5 @@ db.student.aggregate([
 10. Create an index on the sname field and drop the index created on the sname field in the student collection. 
 
 db.student.createIndex({sname: 1})
+db.student.dropIndex({sname: 1})
 db.student.getIndexes()
