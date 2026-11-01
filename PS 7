@@ -3,7 +3,7 @@ CREATE TABLE Library (
     book_name VARCHAR2(50),
     author VARCHAR2(50),
     category VARCHAR2(30),
-    date DATE,
+    book_date DATE,
     operation VARCHAR2(10)
 );
 
@@ -12,7 +12,7 @@ CREATE TABLE Library_Audit (
     book_name VARCHAR2(50),
     author VARCHAR2(50),
     category VARCHAR2(30),
-    date DATE,
+    book_date DATE,
     operation VARCHAR2(10)
 );
 
